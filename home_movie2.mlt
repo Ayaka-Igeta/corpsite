@@ -1,0 +1,31 @@
+<?xml version="1.0" standalone="no"?>
+<mlt LC_NUMERIC="C" version="7.23.0" title="Shotcut version 24.01.31" parent="producer0" in="00:00:00.000" out="00:00:03.971">
+  <profile description="automatic" width="640" height="360" progressive="1" sample_aspect_num="1" sample_aspect_den="1" display_aspect_num="16" display_aspect_den="9" frame_rate_num="30000" frame_rate_den="1001" colorspace="601"/>
+  <producer id="producer0" title="Shotcut version 24.01.31" in="00:00:00.000" out="00:00:03.971">
+    <property name="length">03:60:00.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">/Users/ayaka_igeta/Desktop/webb2b/global_network_17.jpg</property>
+    <property name="ttl">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="meta.media.progressive">1</property>
+    <property name="seekable">1</property>
+    <property name="format">1</property>
+    <property name="meta.media.width">7891</property>
+    <property name="meta.media.height">5322</property>
+    <property name="mlt_service">qimage</property>
+    <property name="creation_time">2022-09-19T03:37:02</property>
+    <property name="shotcut:skipConvert">0</property>
+    <property name="shotcut:caption">global_network_17.jpg</property>
+    <property name="shotcut:hash">e61c0368c54c434e01df97b2a8bb9a1f</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:projectAudioChannels">2</property>
+    <property name="shotcut:projectFolder">0</property>
+    <filter id="filter0" out="00:00:03.971">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">0</property>
+      <property name="mlt_service">volume</property>
+      <property name="disable">0</property>
+    </filter>
+  </producer>
+</mlt>
