@@ -1,5 +1,6 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import Header from './Header';
+import Top from './Top';
 import Mission from './Mission';
 import Member from './Member';
 import Contact from './Contact';
@@ -9,6 +10,7 @@ function App() {
   return (
     <ChakraProvider>
      <Header/>
+     <Top/>
      <Mission/>
      <Member/>
      <Contact/>
