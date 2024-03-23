@@ -3,8 +3,8 @@ import { Box, Flex, Link, Image  } from '@chakra-ui/react';
 
 function Header() {
   return (
-    <Flex bg="#FFF"
-          color="#151515"
+    <Flex bg=""
+          color="FFF"
           align="center"
           justify="space-between"
           mx="100px"

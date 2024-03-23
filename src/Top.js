@@ -73,17 +73,21 @@ function Top() {
           Project page
         </Button>
       </Box>
+      <Box>
+      <Text
+          as="h2"
+          fontSize="120px”
+          fontWeight="bold Itaric
+          fontFamily="Helvetica Neue"
+          color='linear-gradient(to right, #FFC857, #FFC857, #DCA7A7)'
+          mt="63px"
+          textAlign="right"
+          ml="48px"
+        >
+         Mother  Web3
+        </Text>
+        </Box>
 
-      {/* 画像の追加 */}
-      <Image
-        src="Mother×web.png" // 正しいパスに変更してください
-        alt="Mother×web logo"
-        position="absolute"
-        right="0"
-        top="0"
-        height="auto"
-        maxHeight="100vh"
-      />
     </Box>
   );
 }

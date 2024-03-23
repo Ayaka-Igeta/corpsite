@@ -3,6 +3,7 @@ import Header from './Header';
 import Top from './Top';
 import Mission from './Mission';
 import Platfome from './Platfome';
+import Community from './Community';
 import Member from './Member';
 import Contact from './Contact';
 import Footer from './Footer';
@@ -14,6 +15,7 @@ function App() {
      <Top/>
      <Mission/>
      <Platfome/>
+     <Community/>
      <Member/>
      <Contact/>
      <Footer/>

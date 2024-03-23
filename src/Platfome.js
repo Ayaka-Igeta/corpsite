@@ -1,96 +1,61 @@
-import { Box, Center, Text, Image, Button } from '@chakra-ui/react';
+import { Box, Text, Image, Button, Center, ChakraProvider } from '@chakra-ui/react';
 
-function App() {
+function Platform() {
   return (
     <Box
       w="full"
-      minH="100vh" 
-      bg="#5ABCB940" 
-      position="relative" 
+      minH="100vh"
+      bg="#5ABCB9"
+      position="relative"
       zIndex="1"
     >
-      <Box
-        maxW="1600px" 
-        w="full" 
-        mx="auto" 
-        minH="1074px" 
-        bg="#5ABCB9"
-        position="relative"
-        zIndex="2" 
-        p={{ base: "16px", md: "32px" }} // Responsive padding
-      >
+        <Box position="relative" width="full" height="300px">
+          <Box position="absolute" top="0" left="0" right="0" bottom="0" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
+            <Box position="relative">
+              <Text
+                fontSize={{ base: "24px", md: "32px" }}
+                fontFamily="'Helvetica'"
+                color="white"
+                mt="20px"
+                _after={{
+                  content: "''",
+                  position: 'absolute',
+                  display: 'block',
+                  height: '8px',
+                  width: '100%',
+                  bottom: '-4px',
+                  background: 'linear-gradient(to right, #FFC857, #FFC857, #DCA7A7)',
+              
+                }}
+              >
+                Web3 Platform
+              </Text>
+            </Box>
 
-        <Center my={{ base: "20px", md: "40px" }} mb={{ base: "20px", md: "20px" }}>
-          <Text
-            fontSize={{ base: "24px", md: "32px" }}
-            fontFamily="'Helvetica'"
-            position="relative"
-            color="white"
-            _after={{
-              content: "''",
-              position: 'absolute',
-              display: 'block',
-              height: '8px',
-              width: '100%',
-              bottom: '0',
-              marginBottom: '-4px',
-              background: 'linear-gradient(to right, #FFC857, #FFC857, #DCA7A7)',
-            }}
-          >
-            Web3 Platfome
-          </Text>
-        </Center>
+            {/* 新しいテキストコンポーネントをここに挿入 */}
+            <Text
+              fontSize={{ base: "6xl", md: "8xl" }} // 104ptに相当するサイズに調整する
+              fontFamily="'Montserrat'"
+              fontStyle="italic"
+              fontWeight="ExtraBold 800 Italic"
+              color="white"
+              mt={{ base: "20px", md: "30px" }} // テキスト間のマージンを調整
+            >
+              Idea flow Bank
+            </Text>
 
-        <Center >
-        <Image 
-          src="Ideaflowbank.png" 
-          alt="イメージの説明" 
-          boxSize={{ base: "100px", md: "800px" }} 
-          objectFit="contain" 
-        />
-      </Center>
-
-
-        <Center my={{ base: "20px", md: "40px" }} mb={{ base: "20px", md: "20px" }}>
-        <Button
-          bg="#FFC857" 
-          color="white"
-          _hover={{ bg: "#e6b347" }} // ホバー時の背景色
-        >
-          What's Idea Flow Bank?
-        </Button>
-      </Center>
-
-        <Center my={{ base: "20px", md: "40px" }} >
-          <Text
-            fontSize={{ base: "24px", md: "32px" }}
-            fontFamily="'Helvetica'"
-            position="relative"
-            color="white"
-            _after={{
-              content: "''",
-              position: 'absolute',
-              display: 'block',
-              height: '8px',
-              width: '100%',
-              bottom: '0',
-              marginBottom: '-4px',
-              background: 'linear-gradient(to right, #FFC857, #FFC857, #DCA7A7)',
-            }}
-          >
-            Community
-          </Text>
-        </Center>
-
-        <Center my={{ base: "20px", md: "40px" }}>
-          <Box d="flex" justifyContent="space-around" flexWrap="wrap">
-            <Image src="homeschool.png" alt="homeschool" p="4" />
-            <Image src="homeschool.png" alt="inner journal" p="4" />
+            <Button
+              bg="#FFC857"
+              color="white"
+              _hover={{ bg: "#e6b347" }}
+              mt="20px" // ボタンとの間隔
+            >
+              What's Idea Flow Bank?
+            </Button>
           </Box>
-        </Center>
-      </Box>
+        </Box>
     </Box>
   );
 }
 
-export default App;
+export default Platform;
