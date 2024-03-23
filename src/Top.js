@@ -76,15 +76,16 @@ function Top() {
       <Box>
       <Text
           as="h2"
-          fontSize="120px”
-          fontWeight="bold Itaric
+          fontSize="120px"
+          fontStyle="Italic"
+          fontWeight="Bold"
           fontFamily="Helvetica Neue"
           color='linear-gradient(to right, #FFC857, #FFC857, #DCA7A7)'
           mt="63px"
           textAlign="right"
           ml="48px"
         >
-         Mother  Web3
+         Mother x Web3
         </Text>
         </Box>
 

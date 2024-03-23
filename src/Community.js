@@ -8,7 +8,7 @@ function Community() {
         w="full"
         mx="auto"
         minH="1074px"
-        bg="#5ABCB9"
+        bg="#5ABCB90"
         position="relative"
         zIndex="2"
         p={{ base: "16px", md: "32px" }}

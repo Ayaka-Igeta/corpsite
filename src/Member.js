@@ -40,7 +40,7 @@ const Members = () => {
         right={0}
         bottom={0}
         bg="white"
-        opacity="0.5" // オーバーレイの透明度調整
+        opacity="0.9" // オーバーレイの透明度調整
         zIndex="1" // 他の要素よりも背面に配置
       ></Box>
 
