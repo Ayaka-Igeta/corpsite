@@ -1,18 +1,26 @@
 import { Box, Text, Button, ChakraProvider } from '@chakra-ui/react';
-
+import React,{useEffect} from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+  
 function Platform() {
+  useEffect(() => {
+    AOS.init(); // AOSを初期化
+  }, []);
+
   return (
     <ChakraProvider>
       <Box
-        w="full"
-        minH={{ base: "100vh", md: "60vh" }} // モバイルでは100vh、中サイズの画面で60vh
+        width={{ base: "100%", sm: "80%", md: "80%" }}
+        minH={{ base: "100%", sm: "80%", md: "80%" }} 
+        marginX="auto"
         bg="#5ABCB9"
         position="relative"
       >
           <Box
             position="relative"
             width="full"
-            height={{ base: "auto", md: "300px" }} // モバイルでは内容に応じて、中サイズでは固定高さ
+            height={{ base: "auto", md: "auto" }} // モバイルでは内容に応じて、中サイズでは固定高さ
             pt={{ base: "20px", md: "0" }} // モバイルでの上パディング
           >
             <Box
@@ -27,7 +35,7 @@ function Platform() {
                 fontSize={{ base: "24px", md: "32px", lg: "40px" }} // フォントサイズの調整
                 fontFamily="Helvetica"
                 color="white"
-                mt="20px"
+                mt="80px"
                 textAlign="center" // 中央揃え
                 _after={{
                   content: "''",
@@ -43,7 +51,8 @@ function Platform() {
               </Text>
 
               <Text
-                fontSize={{ base: "4xl", md: "6xl", lg: "8xl" }} 
+                fontSize={{ base: "36px", md: "60px", lg: "96px" }}
+                data-aos="fade-up"
                 fontFamily="Montserrat"
                 fontStyle="italic"
                 fontWeight="900"
@@ -55,7 +64,7 @@ function Platform() {
               </Text>
 
               <Text
-                fontSize={{ base: "4xl", md: "6xl", lg: "8xl" }}
+                fontSize={{ base: "36px", md: "60px", lg: "96px" }}
                 fontFamily="Montserrat"
                 fontStyle="italic"
                 fontWeight="900"
@@ -77,13 +86,15 @@ function Platform() {
                   </Text>
 
               <Button
-                fontSize={{ base: "16px", md: "24px", lg: "32px" }} // ボタンのフォントサイズをレスポンシブに
+                fontSize={{ base: "16px", md: "20px", lg: "24px" }} // ボタンのフォントサイズをレスポンシブに
                 fontFamily="Helvetica"
+                data-aos="flip-left"
                 color="white"
-                mt="80px"
+                mt="40px"
+                mb="80px"
                 bg="#FFC857"
                 _hover={{ bg: "#e6b347" }}
-                w={{ base: "90%", sm: "200px", md: "400px" }} // ボタンの幅をレスポンシブに
+                w={{ base: "90%", sm: "200px", md: "280px" }} // ボタンの幅をレスポンシブに
                 h={{ base: "32px", md: "48px" }} // ボタンの高さをレスポンシブに
                 borderRadius="20px"
                 border="2px solid white"

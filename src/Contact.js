@@ -46,22 +46,21 @@ const ContactBanner = () => {
 </Text>
 
         <Text 
-        fontSize={["24px", "28px", "36px"]} 
+        fontSize={["24px", "24px", "24px"]} 
         color="#FFF" 
-        mb={["16px", "20px", "24px"]}
+        mb={["16px", "20px", "40px"]}
         zIndex="2">
-          ここにテキストが入ります。
+          私たちとお話ししませんか？
         </Text>
 
         <Button
         size="md"
         bg="#FFC857"
-        color="#FFF" // ボタンのテキスト色を白に設定
+        color="#FFF" 
         _hover={{ bg: "#e6b64c" }}
         p={["10px", "10px", "20px"]}
-        borderRadius="20px" // 角の丸みを20に設定
-        width="200px" // ボタンの幅を200pxに設定（これをプロジェクトの要件に合わせて調整してください）
-        zIndex="2"
+        borderRadius="20px" 
+        width="200px" 
         >
         Click here
         </Button>

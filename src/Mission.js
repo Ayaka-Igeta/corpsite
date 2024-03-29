@@ -1,13 +1,18 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import { Box, Text, VStack, Center } from '@chakra-ui/react';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+  
 function Mission() {
+  useEffect(() => {
+    AOS.init(); // AOSを初期化
+  }, []);
   return (
     <Box p={{ base: "0 20px", md: "0 40px" }}>
       <VStack spacing={4}>
         <Center my={{ base: "40px", md: "80px" }}>
           <Text
-            fontSize={{ base: "24px", md: "32px" }}
+            fontSize={{ base: "24px", md: "32px" ,lg: "40px" }}
             fontFamily="'Helvetica'"
             position="relative"
             _after={{
@@ -25,7 +30,7 @@ function Mission() {
           </Text>
         </Center>
         <Box maxWidth={{ base: "100%", md: "800px" }} textAlign="left" margin="0 auto">
-          <Text fontSize={{ base: "lg", md: "xl" }}>
+          <Text fontSize={{ base: "lg", md: "xl" }} data-aos="fade-up" >
             わたしって、無力だな。<br />
           <Text fontSize="xl" fontFamily="'Zen Maru Gothic', sans-serif" 
             pt="24px" pb="24px" pl="24px" pr="24px"> 

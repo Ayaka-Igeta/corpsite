@@ -1,22 +1,27 @@
 import React from 'react';
-import { Box, Flex, Link, Image  } from '@chakra-ui/react';
+import { Box, Flex, Link, Image, useBreakpointValue } from '@chakra-ui/react';
 
 function Header() {
+  const mxValue = useBreakpointValue({ base: "20px", md: "100px" });
+  const ptValue = useBreakpointValue({ base: "15px", md: "30px" });
+  const imageHeight = useBreakpointValue({ base: "15px", md: "20px" });
+  const fontSize = useBreakpointValue({ base: "sm", md: "md" });
+
   return (
     <Flex bg=""
           color="FFF"
           align="center"
           justify="space-between"
-          mx="100px"
-          pt="30px"
-          height="80px" // Flexコンテナの高さを設定
+          mx={mxValue} 
+          pt={ptValue} 
+          height="80px" 
           >
-      {/* ロゴまたはタイトル */}
+
       <Box ml="4px">
-          <Image src="logo_B2B.png" alt="B2B Makers Logo" height="20px" />
+          <Image src="logo_B2B.png" alt="B2B Makers Logo" height={imageHeight} />
       </Box>
-      {/* ナビゲーションリンク */}
-      <Box flex={1} mr="16px" textAlign="right">
+
+      <Box flex={1} mr="16px" textAlign="right" fontSize={fontSize}>
         <Link href="/" mr="24px">
           Home
         </Link>

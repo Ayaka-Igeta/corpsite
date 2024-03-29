@@ -1,6 +1,14 @@
-import { Box, Text, Button, useBreakpointValue, Image } from '@chakra-ui/react';
+import { Flex, Box, Text, useBreakpointValue, Image } from '@chakra-ui/react';
+import React,{useEffect} from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-function Top() {
+const 
+  Top = () => {
+  useEffect(() => {
+    AOS.init(); // AOSを初期化
+  }, []);
+
   // レスポンシブでフォントサイズを調整する
   const fontSize = useBreakpointValue({ base: '48pt', md: '56pt' });
   const boxSize = useBreakpointValue({ base: '90vw', md: '725px' });
@@ -9,11 +17,12 @@ function Top() {
   const buttonHeight = useBreakpointValue({ base: 'auto', md: '40px' }); 
   const buttonTextSize = useBreakpointValue({ base: '14pt', md: '20pt' });
 
+
   return (
-    <Box
-      bg="darkBlue"
-      color="white"
+    <Flex
       height="100vh"
+      direction="column"
+      justify="start"
       backgroundImage="top_contact.jpg"
       backgroundPosition="center"
       backgroundRepeat="no-repeat"
@@ -22,11 +31,9 @@ function Top() {
     >
       {/* 中央のボックス */}
       <Box
-        position="absolute"
+        position="relative"
         top="80px"
-        left="50%"
-        transform="translateX(-100%)"
-        zIndex="2"
+        ml="80px"
         width={boxSize}
         height={boxHeight}
         bg="#5ABCB940" // 40% opacity
@@ -52,7 +59,6 @@ function Top() {
         </Text>
         <Text
           fontSize={buttonTextSize}
-          fontWeight="bold"
           fontFamily="Helvetica, sans-serif"
           color="#5ABCB9"
           my="16px"
@@ -60,36 +66,28 @@ function Top() {
         >
           Everyone feels light, Towards a society where people can work with excitement.
         </Text>
-        <Button
-          bgColor="#FFC857"
-          color="#FFF"
-          borderRadius="20px" 
-          width={buttonWidth} 
-          height={buttonHeight} 
-          variant="solid"
-          alignSelf="flex-start"
-          ml="48px"
-        >
-          Project page
-        </Button>
       </Box>
-      <Box>
-      <Text
-          as="h2"
-          fontSize="120px"
-          fontStyle="Italic"
-          fontWeight="Bold"
-          fontFamily="Helvetica Neue"
-          color='linear-gradient(to right, #FFC857, #FFC857, #DCA7A7)'
-          mt="63px"
-          textAlign="right"
-          ml="48px"
-        >
-         Mother x Web3
-        </Text>
-        </Box>
 
-    </Box>
+      <Box textAlign="left" transform="rotate(180deg)" position="absolute" top="0" right="0" >
+      <Text
+        fontSize={{ base: "6xl", sm: "7xl", md: "8xl", lg: "9xl" }}
+        data-aos="fade-up-right"
+        fontStyle="italic"
+        fontWeight="bold"
+        fontFamily="Helvetica Neue"
+        
+        sx={{
+          writingMode: "vertical-rl", // テキストを縦に配置
+          background: 'linear-gradient(to right, #FFC857, #FFC857, #DCA7A7)', // グラデーションの背景
+          WebkitBackgroundClip: "text", // 背景クリップをテキストに適用
+          WebkitTextFillColor: "transparent", // グラデーションをテキストの色として適用
+          display: "inline-block", // 背景クリップとグラデーションを適用するために必要
+        }}
+      >
+        Mother x Web3
+      </Text>
+     </Box>
+    </Flex>
   );
 }
 

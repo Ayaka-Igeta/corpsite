@@ -2,16 +2,15 @@ import { Box, Center, Text, Image } from '@chakra-ui/react';
 
 function Community() {
   return (
-    <Box w="full" minH="100vh" bg="#5ABCB940" position="relative" zIndex="1">
+    
       <Box
-        maxW="1600px"
-        w="full"
-        mx="auto"
-        minH="1074px"
-        bg="#5ABCB90"
-        position="relative"
-        zIndex="2"
-        p={{ base: "16px", md: "32px" }}
+      width={{ base: "100%", sm: "80%", md: "80%" }}
+      minH={{ base: "100%", sm: "80%", md: "80%" }} 
+      marginX="auto"
+      bg="#5ABCB9"
+      position="relative"
+      zIndex="1"
+      p={{ base: "16px", md: "32px" }}
       >
         <Box
           position="relative"
@@ -24,7 +23,7 @@ function Community() {
           {/* Community Text */}
           <Center my={{ base: "20px", md: "40px" }}>
             <Text
-              fontSize={{ base: "24px", md: "32px" }}
+              fontSize={{ base: "24px", md: "32px", lg: "40px" }}
               fontFamily="'Helvetica'"
               position="relative"
               color="white"
@@ -43,27 +42,39 @@ function Community() {
             </Text>
           </Center>
 
-          {/* Other Content */}
           <Center w="full" my={{ base: "20px", md: "40px" }}>
             <Box
               display="flex"
-              justifyContent="space-around"
+              justifyContent="center"
               alignItems="center"
               flexWrap="wrap"
+              gap="20px"
               w="full"
             >
-              {/* Each image is now in a flex container that takes up half the width on larger screens */}
-              <Box w={{ base: "100%", md: "50%" }} p="4" display="flex" justifyContent="center" alignItems="center">
-                <Image src="homeschool.png" alt="homeschool" w="auto" maxW="100%" maxHeight="100%" />
-              </Box>
-              <Box w={{ base: "100%", md: "50%" }} p="4" display="flex" justifyContent="center" alignItems="center">
-                <Image src="homeschool.png" alt="inner journal" w="auto" maxW="100%" maxHeight="100%" />
-              </Box>
+
+        <Box w={{ base: "100%", md: "40%" }} p="8" bg="white" borderRadius="lg" shadow="md" m="4">
+          <Image src="homeschool.png" alt="homeschool" borderRadius="md" />
+          <Text mt="4" fontSize="lg" fontWeight="bold">
+            Homeschool x Tech Education
+          </Text>
+          <Text mt="2">
+            Homeschoolでテック教育をサポートするアプリケーション。
+          </Text>
+        </Box>
+        
+        <Box w={{ base: "100%", md: "40%" }} p="8" bg="white" borderRadius="lg" shadow="md" m="4">
+          <Image src="IMG_1290.png" alt="inner journal" borderRadius="md" />
+          <Text mt="4" fontSize="lg" fontWeight="bold">
+            Inner Journal
+          </Text>
+          <Text mt="2">
+            自己理解を深めるジャーナリングアプリケーション。
+          </Text>
+        </Box>
             </Box>
           </Center>
         </Box>
       </Box>
-    </Box>
   );
 }
 
