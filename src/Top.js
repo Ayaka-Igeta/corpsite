@@ -1,4 +1,4 @@
-import { Flex, Box, Text, useBreakpointValue, Image } from '@chakra-ui/react';
+import { Flex, Box, Text, useBreakpointValue, } from '@chakra-ui/react';
 import React,{useEffect} from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -13,8 +13,6 @@ const
   const fontSize = useBreakpointValue({ base: '48pt', md: '56pt' });
   const boxSize = useBreakpointValue({ base: '90vw', md: '725px' });
   const boxHeight = useBreakpointValue({ base: '60vw', md: '600px' });
-  const buttonWidth = useBreakpointValue({ base: 'full', md: '200px' }); 
-  const buttonHeight = useBreakpointValue({ base: 'auto', md: '40px' }); 
   const buttonTextSize = useBreakpointValue({ base: '14pt', md: '20pt' });
 
 
@@ -84,7 +82,7 @@ const
           display: "inline-block", // 背景クリップとグラデーションを適用するために必要
         }}
       >
-        Mother x Web3
+        DAO Community
       </Text>
      </Box>
     </Flex>

@@ -6,6 +6,8 @@ import Platfome from './Platfome';
 import Community from './Community';
 import Member from './Member';
 import Contact from './Contact';
+import Company from './Company';
+import ContactForm from './ContactForm';
 import Footer from './Footer';
 
 function App() {
@@ -18,6 +20,8 @@ function App() {
      <Community/>
      <Member/>
      <Contact/>
+     <Company/>
+     <ContactForm/>
      <Footer/>
     </ChakraProvider>
   );

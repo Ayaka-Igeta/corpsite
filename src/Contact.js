@@ -1,11 +1,11 @@
 import React from 'react';
-import { Box, Image, Text, Button, Flex } from '@chakra-ui/react';
+import { Box, Text, Button, Flex } from '@chakra-ui/react';
 
-const ContactBanner = () => {
+const Contact = () => {
   return (
     <Flex
       w="100vw" // コンテナの幅をビューポートの100%にします。
-      h={["25vh", "30vh", "35vh", "460px"]} // 異なるビューポートサイズでの高さを配列で指定します。
+      h={["25vh", "30vh", "35vh", "800px"]} // 異なるビューポートサイズでの高さを配列で指定します。
       bg="#000000" 
       bgImage="top_contact.jpg"
       bgSize="cover"
@@ -23,12 +23,16 @@ const ContactBanner = () => {
         bgColor="rgba(0, 0, 0, 0.5)" // オーバーレイの色と不透明度を指定
         zIndex="1" // オーバーレイを背景とテキストの間に配置
       />
-       <Box p={["20px", "20px", "40px"]} textAlign="center" zIndex="2">
+       <Box p={["20px", "20px", "40px"]} 
+       textAlign="center" 
+       zIndex="2"
+       mt={{ base: "40px", md: "80px", lg: "80px" }}
+       >
         <Text
-        fontSize={["24px", "28px", "36px"]}
+        fontSize={{ base: "24px", md: "32px", lg: "40px" }}
         fontFamily="Helvetica"
         color="#FFF"
-        mb={["16px", "20px", "24px"]}
+        mb={["16px", "20px", "40px"]}
         position="relative"
 >
      <Box as="span" position="relative" _after={{
@@ -46,27 +50,31 @@ const ContactBanner = () => {
 </Text>
 
         <Text 
-        fontSize={["24px", "24px", "24px"]} 
+        fontSize={{ base: "24px", md: "32px", lg: "40px" }}
         color="#FFF" 
         mb={["16px", "20px", "40px"]}
         zIndex="2">
-          私たちとお話ししませんか？
+          お気軽にご連絡ください！
         </Text>
 
         <Button
-        size="md"
-        bg="#FFC857"
-        color="#FFF" 
-        _hover={{ bg: "#e6b64c" }}
-        p={["10px", "10px", "20px"]}
-        borderRadius="20px" 
-        width="200px" 
+          fontSize={{ base: "16px", md: "20px", lg: "24px" }} 
+          fontFamily="Helvetica"
+          data-aos="flip-left"
+          color="white"
+          bg="#FFC857"
+          p={["10px", "10px", "20px"]}
+          _hover={{ bg: "#e6b347" }}
+          w={{ base: "90%", sm: "200px", md: "280px" }} // ボタンの幅をレスポンシブに
+          h={{ base: "32px", md: "48px" }} // ボタンの高さをレスポンシブに
+          borderRadius="20px"
+          border="2px solid white"
         >
-        Click here
+          Click here
         </Button>
       </Box>
     </Flex>
   );
 };
 
-export default ContactBanner;
+export default Contact;

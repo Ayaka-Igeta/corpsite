@@ -35,7 +35,7 @@ import {
     name: "AYAKA IGETA",
     role: "Chief Public Relations",
     imageSrc: "ayaka.jpg",
-    vision: "【人生という航海においてチャレンジする気持ちを忘れない。希望の帆を広げ、風を掴む】",
+    vision: "私のビジョンは、【人生という航海においてチャレンジする気持ちを忘れない。希望の帆を広げ、風を掴む】です。",
     profile: "大学卒業後は金融機関やベンチャー企業を経て結婚、出産し、現在は7歳と4歳の子育て中です。子どもたちが大人になる頃には、女性、特に母たちがさまざまな面で損せず、より生きやすく、より働きやすい社会を本気で作りたいと思っています。今、Web3の革新的なテクノロジーを用いてそれが可能かトライアンドエラーを繰り返しているところです。私たちは、それをやり遂げることが会社としての責任であって、私自身は当社の考え方やアクションを広く世の中の方に知っていただけるように動いていきたいと思っています。様々な方々にお力添えをいただければ幸いです。諦めずに取り組んでいきたいと思っています。"
   },
   {
@@ -73,7 +73,7 @@ const Members = () => {
     align="center" 
     justify="center" 
     w="100vw"
-    h="auto" 
+    h={{ base: "100vh", md: "100vh", lg: "100vh" }}
     bgImage="member.jpg" 
     bgSize="cover" 
     bgPos="center center" 
@@ -94,7 +94,8 @@ const Members = () => {
       position="relative" 
       zIndex="3" 
       >
-        <Text fontSize={{ base: "24px", md: "32px" }} 
+        <Text
+        fontSize={{ base: "24px", md: "32px", lg: "40px" }}
         fontFamily="Helvetica" 
         position="relative"
         _after={{
