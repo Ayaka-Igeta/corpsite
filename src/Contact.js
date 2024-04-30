@@ -28,33 +28,35 @@ const Contact = () => {
        zIndex="2"
        mt={{ base: "40px", md: "80px", lg: "80px" }}
        >
-        <Text
-        fontSize={{ base: "24px", md: "32px", lg: "40px" }}
-        fontFamily="Helvetica"
-        color="#FFF"
-        mb={["16px", "20px", "40px"]}
-        position="relative"
+       <Text
+  fontSize={{ base: "24px", md: "32px", lg: "40px" }}
+  fontFamily="Helvetica"
+  color="white"
+  mt="80px"
+  textAlign="center"
+  position="relative" 
+  display="inline-block" 
+  _after={{
+    content: "''",
+    position: 'absolute',
+    bottom: '-4px', 
+    left: '0', 
+    right: '0', 
+    height: '8px',
+    width: 'auto', 
+    bgGradient: 'linear(to-r, #FFC857, #FFC857, #DCA7A7)' 
+  }}
 >
-     <Box as="span" position="relative" _after={{
-      content: "''",
-      position: 'absolute',
-      display: 'block',
-      height: '8px',
-      width: '100%', // spanの幅に合わせて100%にします
-      left: 0,
-      bottom: '-12px', // 下線とテキストの間の余白
-      background: 'linear-gradient(to right, #FFC857, #FFC857, #DCA7A7)'
-    }}>
-    Contact us
-  </Box>
+  Contact us
 </Text>
 
+
         <Text 
-        fontSize={{ base: "24px", md: "32px", lg: "40px" }}
+        fontSize={{ base: "16px", md: "20px", lg: "32px" }}
         color="#FFF" 
-        mb={["16px", "20px", "40px"]}
+        mb={["20px", "24px", "80px"]}
         zIndex="2">
-          お気軽にご連絡ください！
+          {/* お気軽にご連絡ください！ */}
         </Text>
 
         <Button

@@ -39,7 +39,8 @@ const Company = () => {
         color="white"
         bg="#5ABCB9" 
         p={{ base: "4", md: "6", lg: "8" }} 
-        boxShadow="md" borderRadius="lg">
+        boxShadow="0px 8px 24px rgba(0, 0, 0, 0.20)"  
+        borderRadius="lg">
         
         <VStack spacing={{ base: "4", md: "6", lg: "8" }} align="start">
           {/* 各項目 */}

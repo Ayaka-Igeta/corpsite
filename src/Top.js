@@ -68,7 +68,7 @@ const
 
       <Box textAlign="left" transform="rotate(180deg)" position="absolute" top="0" right="0" >
       <Text
-        fontSize={{ base: "6xl", sm: "7xl", md: "8xl", lg: "9xl" }}
+        fontSize={{ base: "5xl", sm: "6xl", md: "7xl", lg: "8xl" }}
         data-aos="fade-up-right"
         fontStyle="italic"
         fontWeight="bold"

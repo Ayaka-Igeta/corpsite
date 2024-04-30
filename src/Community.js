@@ -27,13 +27,15 @@ function Community() {
               fontFamily="'Helvetica'"
               position="relative"
               color="white"
+              mt="80px"
+              textAlign="center"
               _after={{
                 content: "''",
-                position: 'absolute',
+                position: 'relative',
                 display: 'block',
                 height: '8px',
                 width: '100%',
-                bottom: '0',
+                mt: '4px',
                 marginBottom: '-4px',
                 background: 'linear-gradient(to right, #FFC857, #FFC857, #DCA7A7)',
               }}
